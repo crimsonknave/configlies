@@ -50,9 +50,7 @@ autocmd FileType python,ruby autocmd BufWritePre * :%s/\s\+$//e
 match Todo /\s\+$/
 
 
-"au BufRead,BufNewFile *.rabl set filetype=ruby
-"autocmd BufRead *.rabl syn keyword rubyRabl code node child object extends
-"highlight def link rubyRabl Function
+au BufRead,BufNewFile *.rabl setf ruby
 
 " Rspec highlighting out of rails projects
 autocmd BufRead *_spec.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject its shared_examples_for shared_context let
@@ -60,5 +58,11 @@ highlight def link rubyRspec Function
 
 call pathogen#infect()
 
+" For syntastic
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
+
+" For Powerline
+let g:Powerline_symbols = 'fancy'
+set laststatus=2
+set guifont=Ubuntu\ Mono\ for\ Powerline\ 10
 

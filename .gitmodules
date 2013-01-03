@@ -29,3 +29,12 @@
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
+[submodule ".vim/bundle/vim-powerline"]
+	path = .vim/bundle/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule ".fonts/ubuntu-mono-powerline"]
+	path = .fonts/ubuntu-mono-powerline
+	url = https://github.com/scotu/ubuntu-mono-powerline.git
+[submodule ".fonts/ubuntu-mono-powerline-ttf"]
+	path = .fonts/ubuntu-mono-powerline-ttf
+	url = https://github.com/pdf/ubuntu-mono-powerline-ttf.git
