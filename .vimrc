@@ -1,5 +1,21 @@
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+" Autosaving and loading folds
+" These worked, but would give errors on unnamed files
+"au BufWritePost,BufLeave,WinLeave ?* mkview
+"au BufWinEnter ?* silent loadview
+"
+"This seems to work for everything.
+set viewoptions-=options
+augroup vimrc
+  autocmd BufWritePost *
+        \   if expand('%') != '' && &buftype !~ 'nofile'
+        \|      mkview
+        \|  endif
+  autocmd BufRead *
+        \   if expand('%') != '' && &buftype !~ 'nofile'
+        \|      silent loadview
+        \|  endif
+augroup END
+
 syntax on
 set expandtab tabstop=2 shiftwidth=2
 set background=dark
@@ -17,6 +33,7 @@ set vb t_vb=
 set ruler
 set hls
 set incsearch
+set hlsearch
 set virtualedit=all
 set ignorecase smartcase
 " Adds extra 'magic' to regex which just means they are normal regexs
@@ -33,7 +50,7 @@ set number
 inoremap jj <Esc>
 inoremap kk <Esc>
 inoremap hh <Esc>
-"inoremap ll <Esc>
+inoremap llll <Esc>
 " Two ls are very common...
 inoremap <C-kPlus> <C-A>
 inoremap <C-tK6> <C-A>
@@ -42,7 +59,8 @@ let g:clipbrdDefaultReg = '+'
 nnoremap <silent> k gk
 nnoremap <silent> j gj
 set wrap
-"set autochdir
+
+"Changes the vim directory to the directory the file is in
 autocmd BufEnter * silent! lcd %:p:h
 
 "Remove trailing whitespace
