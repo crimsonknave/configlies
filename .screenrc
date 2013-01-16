@@ -30,7 +30,10 @@ pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
 # set every new windows hardstatus line to somenthing descriptive
 # defhstatus "screen: ^En (^Et)"
 
-defscrollback 100000
+#Added by me
+defscrollback 1000000
+hardstatus string "%` - [screen %n%?: %t%?] %h"
+backtick 0 30 30 sh -c 'screen -ls |grep --color-no -o "$PPID[^[:space:]]*"'
 
 # don't kill window after the process died
 # zombie "^["
@@ -108,6 +111,8 @@ termcapinfo linux C8
 #
 # keybindings
 #
+# Sets a ruler on the bottom of the session with the names of the windows
+caption always "%{= gk}%-Lw%{= rW}%50> %n%f* %t %{-}%+Lw%< %= %{= Gk} %H %{= rW} %l %{= Gk} %0c:%s %d/%m %{-}"
 
 #remove some stupid / dangerous key bindings
 bind k
