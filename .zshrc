@@ -34,7 +34,7 @@ plugins=(archlinux rails3 ruby python git-flow heroku jruby git rvm vi-mode comp
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/jhenrich/.rvm/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/jhenrich/.rvm/bin:/usr/local/git/bin:/usr/X11/bin
 
 export BROWSER="google-chrome"
 export GNOME_DESKTOP_SESSION_ID="Default"
