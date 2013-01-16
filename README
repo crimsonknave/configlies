@@ -1,0 +1,14 @@
+After pulling down the repo you will need to run :
+
+git submodule update --init
+
+that will pull down the submodules
+
+
+Then, run 
+
+fc-cache -vf
+
+that will regenerate the font cache (one of the submodules is a font for powerline).
+
+Then set your terminal font to be Ubuntu Mono powerline (or whatever the name is)
