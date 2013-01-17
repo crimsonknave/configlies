@@ -19,7 +19,6 @@ augroup END
 syntax on
 set expandtab tabstop=2 shiftwidth=2
 set background=dark
-colorscheme desert
 set nocompatible
 if has("autocmd")
   filetype plugin indent on
@@ -103,7 +102,7 @@ set history=700
 nmap <leader>w :w<cr>
 
 " set command bar height
-set cmdheight=2
+set cmdheight=1
 
 " Don't redraw while executing macros (performance)
 set lazyredraw
@@ -129,3 +128,6 @@ map <leader>sn ]s
 map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
+
+"colorscheme desert
+color vividchalk

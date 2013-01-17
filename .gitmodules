@@ -38,3 +38,15 @@
 [submodule ".fonts/ubuntu-mono-powerline-ttf"]
 	path = .fonts/ubuntu-mono-powerline-ttf
 	url = https://github.com/pdf/ubuntu-mono-powerline-ttf.git
+[submodule ".vim/bundle/distinguished"]
+	path = .vim/bundle/distinguished
+	url = git://github.com/Lokaltog/vim-distinguished.git
+[submodule ".vim/bundle/solarized"]
+	path = .vim/bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/bundle/jellybeans"]
+	path = .vim/bundle/jellybeans
+	url = git://github.com/nanotech/jellybeans.vim.git
+[submodule ".vim/bundle/vividchalk"]
+	path = .vim/bundle/vividchalk
+	url = git://github.com/tpope/vim-vividchalk.git
