@@ -19,13 +19,15 @@ augroup END
 syntax on
 set expandtab tabstop=2 shiftwidth=2
 set background=dark
-color desert
+colorscheme desert
 set nocompatible
 if has("autocmd")
   filetype plugin indent on
 else
   set autoindent
 endif
+" Set to auto read when a file is changed from the outside
+set autoread
 "set smartindent
 set showmatch
 set guioptions=-T
@@ -36,15 +38,18 @@ set incsearch
 set hlsearch
 set virtualedit=all
 set ignorecase smartcase
-" Adds extra 'magic' to regex which just means they are normal regexs
-nnoremap / /\v
-nnoremap ? ?\v
+"" Adds extra 'magic' to regex which just means they are normal regexs
+"nnoremap / /\v
+"nnoremap ? ?\v
+set magic
+
 set showcmd
 if version >= 700
   set spl=en spell
   set nospell
 endif
 set wildmenu
+set wildignore=*.o,*~,*.pyc
 set mouse=a
 set number
 inoremap jj <Esc>
@@ -85,4 +90,42 @@ set laststatus=2
 set guifont=Ubuntu\ Mono\ for\ Powerline\ 10
 
 
+" 256 colors
 set t_Co=256
+
+" history
+set history=700
+
+" set a map leader that and a save shortcut
+" Leader is already \
+"let mapleader = ','
+"let g:mapleader = ','
+nmap <leader>w :w<cr>
+
+" set command bar height
+set cmdheight=2
+
+" Don't redraw while executing macros (performance)
+set lazyredraw
+
+set noerrorbells
+set novisualbell
+set encoding=utf8
+set ffs=unix,dos,mac
+
+" Turn backups off
+" set nobackup
+" set nowb
+" set noswapfile
+
+" disable hightlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
+
+" Toggle spell checking
+map <leader>ss :setlocal spell!<cr>
+
+" Spelling shortcuts
+map <leader>sn ]s
+map <leader>sp [s
+map <leader>sa zg
+map <leader>s? z=
