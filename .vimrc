@@ -84,3 +84,5 @@ let g:Powerline_symbols = 'fancy'
 set laststatus=2
 set guifont=Ubuntu\ Mono\ for\ Powerline\ 10
 
+
+set t_Co=256
