@@ -97,7 +97,7 @@ pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
 # defhstatus "screen: ^En (^Et)"
 
 #Added by me
-defscrollback 1000000
+defscrollback 100000
 hardstatus string "%` - [screen %n%?: %t%?] %h"
 backtick 0 30 30 sh -c 'screen -ls |grep --color-no -o "$PPID[^[:space:]]*"'
 
@@ -197,9 +197,9 @@ bind '}' history
 # Yet another hack:
 # Prepend/append register [/] to the paste if ^a^] is pressed.
 # This lets me have autoindent mode in vi.
-register [ "\033:se noai\015a"
-register ] "\033:se ai\015a"
-bind ^] paste [.]
+#register [ "\033:se noai\015a"
+#register ] "\033:se ai\015a"
+#bind ^] paste [.]
 
 ################
 #
