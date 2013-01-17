@@ -222,3 +222,8 @@ bind ^] paste [.]
 # defnonblock 1
 # blankerprg rain -d 100
 # idle 30 blanker
+
+# 256 colors
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce "on"
