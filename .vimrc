@@ -80,7 +80,8 @@ call pathogen#infect()
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
 
 " For Powerline
-let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'unicode'
 set laststatus=2
 set guifont=Ubuntu\ Mono\ for\ Powerline\ 10
+set t_Co=256
 

@@ -60,4 +60,5 @@ alias ret="RAILS_ENV=test"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-unalias sl
+#unalias sl
+#export TERM='xterm'

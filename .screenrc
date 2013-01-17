@@ -222,3 +222,5 @@ bind ^] paste [.]
 # defnonblock 1
 # blankerprg rain -d 100
 # idle 30 blanker
+
+defutf8 on
