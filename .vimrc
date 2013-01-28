@@ -129,5 +129,6 @@ map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
 
-colorscheme desert
+"colorscheme desert
 "color vividchalk
+color jellybeans
