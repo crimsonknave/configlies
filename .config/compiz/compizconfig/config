@@ -2,3 +2,6 @@
 profile = 
 integration = true
 
+[gnome_session]
+profile = 
+
