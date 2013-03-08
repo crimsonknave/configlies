@@ -132,3 +132,20 @@ map <leader>s? z=
 "colorscheme desert
 "color vividchalk
 color jellybeans
+
+set rtp+=/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'wikitopian/hardmode'
+Bundle 'rorymckinley/vim-symbols-strings'
+Bundle 'tpope/vim-fugitive'
+Bundle 'msanders/snipmate'
+Bundle 'scrooloose/syntastic'
+Bundle 'ap/vim-css-color'
+Bundle 'tpope/vim-surround'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'wincet/Command-T'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'Lokaltog/vim-distinguished'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'nanotec/jellybeans'
+Bundle 'tpope/vividchalk'
