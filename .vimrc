@@ -135,6 +135,7 @@ color jellybeans
 
 set rtp+=/.vim/bundle/vundle/
 call vundle#rc()
+Bundle 'gmarik/vundle'
 Bundle 'wikitopian/hardmode'
 Bundle 'rorymckinley/vim-symbols-strings'
 Bundle 'tpope/vim-fugitive'
