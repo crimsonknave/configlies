@@ -2,7 +2,9 @@ After pulling down the repo you will need to run :
 
 git submodule update --init
 
-that will pull down the submodules
+that will pull down vundle.
+
+Then, inside vim run :BundleInstall and it will pull down all the plugins and manage them.
 
 
 Then, run 
