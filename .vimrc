@@ -16,6 +16,8 @@ augroup vimrc
         \|  endif
 augroup END
 
+call pathogen#infect()
+
 syntax on
 set expandtab tabstop=2 shiftwidth=2
 set background=dark
@@ -78,8 +80,6 @@ au BufRead,BufNewFile *.rabl setf ruby
 autocmd BufRead *_spec.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject its shared_examples_for shared_context let
 highlight def link rubyRspec Function
 
-call pathogen#infect()
-
 " For syntastic
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
 
@@ -132,3 +132,25 @@ map <leader>s? z=
 "colorscheme desert
 "color vividchalk
 color jellybeans
+
+set rtp+=/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'wikitopian/hardmode'
+Bundle 'rorymckinley/vim-symbols-strings'
+Bundle 'tpope/vim-fugitive'
+"Bundle 'msanders/snipmate.vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'honza/snipmate-snippets'
+Bundle 'garbas/vim-snipmate'
+Bundle 'scrooloose/syntastic'
+Bundle 'ap/vim-css-color'
+Bundle 'tpope/vim-surround'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'wincent/Command-T'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'Lokaltog/vim-distinguished'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'ecomba/vim-ruby-refactoring'

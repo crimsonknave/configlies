@@ -1,52 +1,9 @@
-[submodule ".vim/bundle/vim-symbols-strings"]
-	path = .vim/bundle/vim-symbols-strings
-	url = git://github.com/rorymckinley/vim-symbols-strings.git
-  ignore = untracked
-[submodule ".vim/bundle/vim-fugitive"]
-	path = .vim/bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
-  ignore = untracked
-[submodule ".vim/bundle/vim-command-t"]
-	path = .vim/bundle/vim-command-t
-	url = git://github.com/wincent/Command-T.git
-  ignore = untracked
-[submodule ".vim/bundle/vim-snipmate"]
-	path = .vim/bundle/vim-snipmate
-	url = git://github.com/msanders/snipmate.vim.git
-  ignore = untracked
-[submodule ".vim/bundle/vim-syntastic"]
-	path = .vim/bundle/vim-syntastic
-	url = git://github.com/scrooloose/syntastic.git
-  ignore = untracked
-[submodule ".vim/bundle/vim-nerdcommenter"]
-	path = .vim/bundle/vim-nerdcommenter
-	url = git://github.com/scrooloose/nerdcommenter.git
-  ignore = untracked
-[submodule ".vim/bundle/vim-css-color"]
-	path = .vim/bundle/vim-css-color
-	url = git://github.com/ap/vim-css-color.git
-  ignore = untracked
-[submodule ".vim/bundle/vim-surround"]
-	path = .vim/bundle/vim-surround
-	url = git://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/vim-powerline"]
-	path = .vim/bundle/vim-powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
 [submodule ".fonts/ubuntu-mono-powerline"]
 	path = .fonts/ubuntu-mono-powerline
 	url = https://github.com/scotu/ubuntu-mono-powerline.git
 [submodule ".fonts/ubuntu-mono-powerline-ttf"]
 	path = .fonts/ubuntu-mono-powerline-ttf
 	url = https://github.com/pdf/ubuntu-mono-powerline-ttf.git
-[submodule ".vim/bundle/distinguished"]
-	path = .vim/bundle/distinguished
-	url = git://github.com/Lokaltog/vim-distinguished.git
-[submodule ".vim/bundle/solarized"]
-	path = .vim/bundle/solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule ".vim/bundle/jellybeans"]
-	path = .vim/bundle/jellybeans
-	url = git://github.com/nanotech/jellybeans.vim.git
-[submodule ".vim/bundle/vividchalk"]
-	path = .vim/bundle/vividchalk
-	url = git://github.com/tpope/vim-vividchalk.git
+[submodule ".vim/bundle/vundle"]
+	path = .vim/bundle/vundle
+	url = git://github.com/gmarik/vundle.git
