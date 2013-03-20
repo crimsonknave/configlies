@@ -67,7 +67,7 @@ nnoremap <silent> j gj
 set wrap
 
 "Changes the vim directory to the directory the file is in
-autocmd BufEnter * silent! lcd %:p:h
+"autocmd BufEnter * silent! lcd %:p:h
 
 "Remove trailing whitespace
 autocmd FileType python,ruby autocmd BufWritePre * :%s/\s\+$//e
