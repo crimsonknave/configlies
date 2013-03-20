@@ -4,17 +4,17 @@
 "au BufWinEnter ?* silent loadview
 "
 "This seems to work for everything.
-set viewoptions-=options
-augroup vimrc
-  autocmd BufWritePost *
-        \   if expand('%') != '' && &buftype !~ 'nofile'
-        \|      mkview
-        \|  endif
-  autocmd BufRead *
-        \   if expand('%') != '' && &buftype !~ 'nofile'
-        \|      silent loadview
-        \|  endif
-augroup END
+"set viewoptions-=options
+"augroup vimrc
+  "autocmd BufWritePost *
+        "\   if expand('%') != '' && &buftype !~ 'nofile'
+        "\|      mkview
+        "\|  endif
+  "autocmd BufRead *
+        "\   if expand('%') != '' && &buftype !~ 'nofile'
+        "\|      silent loadview
+        "\|  endif
+"augroup END
 
 call pathogen#infect()
 
@@ -193,3 +193,4 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'yaymukund/vim-rabl'
