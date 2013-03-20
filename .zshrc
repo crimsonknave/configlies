@@ -65,3 +65,11 @@ alias rsff="rspec --fail-fast"
 TERM=xterm-256color
 alias rspec="nocorrect rspec"
 alias jruby="nocorrect jruby"
+#alias zrs='zeus rspec'
+rspec() {
+  if [ -S .zeus.sock ]; then
+    zeus rspec "$@"
+  else
+    command rspec "$@"
+  fi
+}
