@@ -63,3 +63,11 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 unalias sl
 alias rsff="rspec --fail-fast"
 TERM=xterm-256color
+#alias zrs='zeus rspec'
+rspec() {
+  if [ -S .zeus.sock ]; then
+    zeus rspec "$@"
+  else
+    command rspec "$@"
+  fi
+}
