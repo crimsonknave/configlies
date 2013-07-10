@@ -102,7 +102,7 @@ highlight def link rubyRspec Function
 
 map <Leader>r :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunLastSpec()<CR>
 
 " For syntastic
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
@@ -153,6 +153,10 @@ map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
 
+" xmpfilter
+map <F4> <Plug>(xmpfilter-mark)
+map <F5> <Plug>(xmpfilter-run)
+
 "colorscheme desert
 "color vividchalk
 color jellybeans
@@ -184,3 +188,4 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'mileszs/ack.vim'
 Bundle 'briancollins/vim-jst'
 Bundle 'thoughtbot/vim-rspec'
+Bundle 't9md/vim-ruby-xmpfilter'
