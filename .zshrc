@@ -73,3 +73,4 @@ rspec() {
     command rspec "$@"
   fi
 }
+autoload zmv
