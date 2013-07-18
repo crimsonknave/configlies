@@ -102,41 +102,7 @@ highlight def link rubyRspec Function
 
 map <Leader>r :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-
-function! RunCurrentSpecFile()
-  if InSpecFile()
-    let l:command = "rspec " . @% . " -f documentation"
-    call SetLastSpecCommand(l:command)
-    call RunSpecs(l:command)
-  endif
-endfunction
-
-function! RunNearestSpec()
-  if InSpecFile()
-    let l:command = "rspec " . @% . " -l " . line(".") . " -f documentation"
-    call SetLastSpecCommand(l:command)
-    call RunSpecs(l:command)
-  endif
-endfunction
-
-function! RunLastSpec()
-  if exists("t:last_spec_command")
-    call RunSpecs(t:last_spec_command)
-  endif
-endfunction
-
-function! InSpecFile()
-  return match(expand("%"), "_spec.rb$") != -1
-endfunction
-
-function! SetLastSpecCommand(command)
-  let t:last_spec_command = a:command
-endfunction
-
-function! RunSpecs(command)
-  execute ":w\|!clear && echo " . a:command . " && echo && " . a:command
-endfunction
+map <Leader>a :call RunLastSpec()<CR>
 
 " For syntastic
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
@@ -187,6 +153,10 @@ map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z=
 
+" xmpfilter
+map <F4> <Plug>(xmpfilter-mark)
+map <F5> <Plug>(xmpfilter-run)
+
 "colorscheme desert
 "color vividchalk
 color jellybeans
@@ -216,3 +186,6 @@ Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'yaymukund/vim-rabl'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'mileszs/ack.vim'
+Bundle 'briancollins/vim-jst'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 't9md/vim-ruby-xmpfilter'
