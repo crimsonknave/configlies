@@ -290,6 +290,11 @@ clientkeys = awful.util.table.join(
             -- minimized, since minimized clients can't have the focus.
             c.minimized = true
         end),
+    awful.key({ modkey, "Shift",  }, "m",
+        function (c)
+            c.maximized_horizontal = false
+            c.maximized_vertical = false
+          end),
     awful.key({ modkey,           }, "m",
         function (c)
             c.maximized_horizontal = not c.maximized_horizontal
