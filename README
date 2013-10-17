@@ -6,6 +6,8 @@ that will pull down vundle.
 
 Then, inside vim run :BundleInstall and it will pull down all the plugins and manage them.
 
+You will then want to pull down oh-my-zsh (and checkout .zshrc again)
+
 
 Then, run 
 
