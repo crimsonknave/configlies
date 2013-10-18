@@ -34,7 +34,7 @@ plugins=(rails3 ruby python git-flow heroku jruby git rvm vi-mode compleat autoj
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/jhenrich/.rvm/bin
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/jhenrich/.rvm/bin
 
 export BROWSER="google-chrome"
 export GNOME_DESKTOP_SESSION_ID="Default"
