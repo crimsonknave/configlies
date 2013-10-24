@@ -21,4 +21,4 @@ After that you should open up vim and run :BundleInstall (ignore the errors abou
 
 To setup Command-T you will need to change into ~/.vim/bundle/Command-T/ruby/command-t and run ruby extconf.rb
 
-You will also want to intall oh-my-zsh
+You will also want to intall oh-my-zsh and then checkout .zshrc (oh-my-zsh overrides it)
