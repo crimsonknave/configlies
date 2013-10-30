@@ -163,6 +163,7 @@ map <F5> <Plug>(xmpfilter-run)
 "color vividchalk
 color jellybeans
 
+let $GIT_SSL_NO_VERIFY = 'true'
 set rtp+=/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
@@ -172,7 +173,7 @@ Bundle 'tpope/vim-fugitive'
 "Bundle 'msanders/snipmate.vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
-Bundle 'honza/snipmate-snippets'
+"Bundle 'honza/snipmate-snippets'
 Bundle 'garbas/vim-snipmate'
 Bundle 'scrooloose/syntastic'
 Bundle 'ap/vim-css-color'

@@ -252,8 +252,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)    end),
     awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1)      end),
     awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1)      end),
-    awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1)         end),
-    awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1)         end),
+    awful.key({ modkey, "Control", "Shift" }, "h",     function () awful.tag.incncol( 1)         end),
+    awful.key({ modkey, "Control", "Shift" }, "l",     function () awful.tag.incncol(-1)         end),
     awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts,  1) end),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
 
@@ -273,8 +273,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "p", function() menubar.show() end),
     -- Added by me
     awful.key({ modkey }, "\\", function() awful.util.spawn('xterm -e top') end),
-    awful.key({ modkey,           }, "s", function () awful.util.spawn('xscreensaver-command -lock') end),
-    awful.key({ modkey,           }, "c", function () awful.util.spawn('xscreensaver-command -lock') end)
+    awful.key({ modkey,           }, "s", function () awful.util.spawn('xscreensaver-command -lock') end)
 )
 
 clientkeys = awful.util.table.join(

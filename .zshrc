@@ -29,12 +29,12 @@ ZSH=$HOME/.oh-my-zsh
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(archlinux rails3 ruby python git-flow heroku jruby git rvm vi-mode compleat autojump)
+plugins=(rails3 ruby python git-flow heroku jruby git rvm vi-mode compleat autojump)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/jhenrich/.rvm/bin
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/jhenrich/.rvm/bin
 
 export BROWSER="google-chrome"
 export GNOME_DESKTOP_SESSION_ID="Default"
@@ -63,6 +63,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 unalias sl
 alias rsff="rspec --fail-fast"
 TERM=xterm-256color
+EDITOR='vim'
 alias rspec="nocorrect rspec"
 alias jruby="nocorrect jruby"
 #alias zrs='zeus rspec'
