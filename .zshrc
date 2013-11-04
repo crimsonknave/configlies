@@ -66,6 +66,7 @@ TERM=xterm-256color
 EDITOR='vim'
 alias rspec="nocorrect rspec"
 alias jruby="nocorrect jruby"
+alias sshc='ssh-copy-id -i ~/.ssh/id_rsa.pub'
 #alias zrs='zeus rspec'
 rspec() {
   if [ -S .zeus.sock ]; then
