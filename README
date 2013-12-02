@@ -16,3 +16,9 @@ fc-cache -vf
 that will regenerate the font cache (one of the submodules is a font for powerline).
 
 Then set your terminal font to be Ubuntu Mono powerline (or whatever the name is)
+
+After that you should open up vim and run :BundleInstall (ignore the errors about not finding colorschemes, that's what we are doing right now)
+
+To setup Command-T you will need to change into ~/.vim/bundle/Command-T/ruby/command-t and run ruby extconf.rb
+
+You will also want to intall oh-my-zsh and then checkout .zshrc (oh-my-zsh overrides it)

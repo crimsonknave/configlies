@@ -34,7 +34,7 @@ plugins=(rails ruby python git-flow heroku jruby git rvm vi-mode compleat autoju
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/jhenrich/.rvm/bin
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/jhenrich/.rvm/bin
 
 export BROWSER="google-chrome"
 export GNOME_DESKTOP_SESSION_ID="Default"
@@ -66,6 +66,7 @@ TERM=xterm-256color
 EDITOR='vim'
 alias rspec="nocorrect rspec"
 alias jruby="nocorrect jruby"
+alias sshc='ssh-copy-id -i ~/.ssh/id_rsa.pub'
 #alias zrs='zeus rspec'
 rspec() {
   if [ -S .zeus.sock ]; then
