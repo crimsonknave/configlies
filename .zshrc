@@ -76,3 +76,4 @@ rspec() {
   fi
 }
 autoload zmv
+doge
