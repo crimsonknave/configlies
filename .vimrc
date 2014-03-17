@@ -95,6 +95,7 @@ match Todo /\s\+$/
 
 
 au BufRead,BufNewFile *.rabl setf ruby
+au BufRead,BufNewFile Vagrantfile setf ruby
 au BufRead,BufNewFile .metrics setf ruby
 au BufRead,BufNewFile .simplecov setf ruby
 au BufRead,BufNewFile Guardfile setf ruby
@@ -195,3 +196,4 @@ Bundle 'thoughtbot/vim-rspec'
 Bundle 't9md/vim-ruby-xmpfilter'
 Bundle 'tpope/vim-markdown'
 Bundle 'puppetlabs/puppet-syntax-vim'
+Bundle 'gcmt/wildfire.vim'
