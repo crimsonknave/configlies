@@ -67,6 +67,7 @@ EDITOR='vim'
 alias rspec="nocorrect rspec"
 alias jruby="nocorrect jruby"
 alias sshc='ssh-copy-id -i ~/.ssh/id_rsa.pub'
+alias gd='git difftool'
 #alias zrs='zeus rspec'
 rspec() {
   if [ -S .zeus.sock ]; then

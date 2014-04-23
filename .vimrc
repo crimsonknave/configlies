@@ -70,7 +70,7 @@ if version >= 700
   set nospell
 endif
 set wildmenu
-set wildignore=*.o,*~,*.pyc
+set wildignore=*.o,*~,*.pyc,coverage,*.jpg,*.png
 set mouse=a
 set number
 inoremap jj <Esc>
