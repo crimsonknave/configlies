@@ -1,25 +1,43 @@
-" Autosaving and loading folds
-" These worked, but would give errors on unnamed files
-"au BufWritePost,BufLeave,WinLeave ?* mkview
-"au BufWinEnter ?* silent loadview
-"
-"This seems to work for everything.
-"set viewoptions-=options
-"augroup vimrc
-  "autocmd BufWritePost *
-        "\   if expand('%') != '' && &buftype !~ 'nofile'
-        "\|      mkview
-        "\|  endif
-  "autocmd BufRead *
-        "\   if expand('%') != '' && &buftype !~ 'nofile'
-        "\|      silent loadview
-        "\|  endif
-"augroup END
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Bundle 'gmarik/vundle'
+Bundle 'wikitopian/hardmode'
+Bundle 'rorymckinley/vim-symbols-strings'
+Bundle 'tpope/vim-fugitive'
+Bundle 'msanders/snipmate.vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'honza/snipmate-snippets'
+Bundle 'garbas/vim-snipmate'
+Bundle 'scrooloose/syntastic'
+Bundle 'ap/vim-css-color'
+Bundle 'tpope/vim-surround'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'wincent/Command-T'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'Lokaltog/vim-distinguished'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'ecomba/vim-ruby-refactoring'
+Bundle 'yaymukund/vim-rabl'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'mileszs/ack.vim'
+Bundle 'briancollins/vim-jst'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 't9md/vim-ruby-xmpfilter'
+Bundle 'tpope/vim-markdown'
+Bundle 'puppetlabs/puppet-syntax-vim'
+Bundle 'gcmt/wildfire.vim'
+Bundle 'wesQ3/vim-windowswap'
+Bundle 'AndrewRadev/splitjoin.vim'
+call vundle#end()
 
 syntax on
 set expandtab tabstop=2 shiftwidth=2
 set background=dark
-set nocompatible
 if has("autocmd")
   filetype plugin indent on
 else
@@ -164,36 +182,3 @@ map <F5> <Plug>(xmpfilter-run)
 color jellybeans
 
 let $GIT_SSL_NO_VERIFY = 'true'
-set rtp+=/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'wikitopian/hardmode'
-Bundle 'rorymckinley/vim-symbols-strings'
-Bundle 'tpope/vim-fugitive'
-"Bundle 'msanders/snipmate.vim'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-"Bundle 'honza/snipmate-snippets'
-Bundle 'garbas/vim-snipmate'
-Bundle 'scrooloose/syntastic'
-Bundle 'ap/vim-css-color'
-Bundle 'tpope/vim-surround'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'wincent/Command-T'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'Lokaltog/vim-distinguished'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'tpope/vim-vividchalk'
-Bundle 'ecomba/vim-ruby-refactoring'
-Bundle 'yaymukund/vim-rabl'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'mileszs/ack.vim'
-Bundle 'briancollins/vim-jst'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 't9md/vim-ruby-xmpfilter'
-Bundle 'tpope/vim-markdown'
-Bundle 'puppetlabs/puppet-syntax-vim'
-Bundle 'gcmt/wildfire.vim'
-Bundle 'wesQ3/vim-windowswap'
-Bundle 'AndrewRadev/splitjoin.vim'

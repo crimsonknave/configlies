@@ -4,6 +4,3 @@
 [submodule ".fonts/ubuntu-mono-powerline-ttf"]
 	path = .fonts/ubuntu-mono-powerline-ttf
 	url = git@github.com:pdf/ubuntu-mono-powerline-ttf.git
-[submodule ".vim/bundle/vundle"]
-	path = .vim/bundle/vundle
-	url = git://github.com/gmarik/vundle.git
