@@ -16,8 +16,6 @@
         "\|  endif
 "augroup END
 
-call pathogen#infect()
-
 syntax on
 set expandtab tabstop=2 shiftwidth=2
 set background=dark
@@ -70,12 +68,12 @@ if version >= 700
   set nospell
 endif
 set wildmenu
-set wildignore=*.o,*~,*.pyc,coverage,*.jpg,*.png
+set wildignore=*.o,*~,*.pyc,coverage,*.jpg,*.png,node_modules
 set mouse=a
 set number
-inoremap jj <Esc>
-inoremap kk <Esc>
-inoremap hh <Esc>
+inoremap jjjj <Esc>
+inoremap kkkk <Esc>
+inoremap hhhh <Esc>
 inoremap llll <Esc>
 " Two ls are very common...
 inoremap <C-kPlus> <C-A>
@@ -197,3 +195,5 @@ Bundle 't9md/vim-ruby-xmpfilter'
 Bundle 'tpope/vim-markdown'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'gcmt/wildfire.vim'
+Bundle 'wesQ3/vim-windowswap'
+Bundle 'AndrewRadev/splitjoin.vim'
