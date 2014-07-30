@@ -9,7 +9,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'msanders/snipmate.vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
-Bundle 'honza/snipmate-snippets'
 Bundle 'garbas/vim-snipmate'
 Bundle 'scrooloose/syntastic'
 Bundle 'ap/vim-css-color'
@@ -27,12 +26,12 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'mileszs/ack.vim'
 Bundle 'briancollins/vim-jst'
 Bundle 'thoughtbot/vim-rspec'
-Bundle 't9md/vim-ruby-xmpfilter'
 Bundle 'tpope/vim-markdown'
 Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'gcmt/wildfire.vim'
 Bundle 'wesQ3/vim-windowswap'
 Bundle 'AndrewRadev/splitjoin.vim'
+Bundle 'terryma/vim-multiple-cursors'
 call vundle#end()
 
 syntax on
@@ -145,6 +144,10 @@ set history=700
 "let g:mapleader = ','
 nmap <leader>w :w<cr>
 
+" Ruby 1.8 to 1.9 hash conversion
+nmap <leader>h :s/\:\([a-zA-Z_]*\)\s*=>/\1\: /g<cr>
+vmap <Leader>h :s/\:\([a-zA-Z_]*\)\s*=>/\1\: /g<cr>
+
 " set command bar height
 set cmdheight=1
 
@@ -182,3 +185,5 @@ map <F5> <Plug>(xmpfilter-run)
 color jellybeans
 
 let $GIT_SSL_NO_VERIFY = 'true'
+
+let g:multi_cursor_exit_from_insert_mode = 0
