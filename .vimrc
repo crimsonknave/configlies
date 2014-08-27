@@ -54,9 +54,6 @@ set incsearch
 set hlsearch
 set virtualedit=all
 set ignorecase smartcase
-"" Adds extra 'magic' to regex which just means they are normal regexs
-"nnoremap / /\v
-"nnoremap ? ?\v
 set magic
 
 " Tell vim to remember certain things when we exit
@@ -84,44 +81,41 @@ if version >= 700
   set spl=en spell
   set nospell
 endif
+
 set wildmenu
 set wildignore=*.o,*~,*.pyc,coverage,*.jpg,*.png,node_modules
 set mouse=a
 set number
-inoremap jjjj <Esc>
-inoremap kkkk <Esc>
-inoremap hhhh <Esc>
-inoremap llll <Esc>
+set wrap
+
 " Two ls are very common...
+inoremap jjj <Esc>
+inoremap kkk <Esc>
+inoremap hhh <Esc>
+inoremap lll <Esc>
+nnoremap <silent> k gk
+nnoremap <silent> j gj
+
+" Unused? 
 inoremap <C-kPlus> <C-A>
 inoremap <C-tK6> <C-A>
 inoremap <C-kMinus> <C-X>
-let g:clipbrdDefaultReg = '+'
-nnoremap <silent> k gk
-nnoremap <silent> j gj
-set wrap
 
-"Changes the vim directory to the directory the file is in
-"autocmd BufEnter * silent! lcd %:p:h
+let g:clipbrdDefaultReg = '+'
 
 "Remove trailing whitespace
 autocmd FileType python,ruby autocmd BufWritePre * :%s/\s\+$//e
 match Todo /\s\+$/
 
-
+" Custom filetypes
 au BufRead,BufNewFile *.rabl setf ruby
 au BufRead,BufNewFile Vagrantfile setf ruby
 au BufRead,BufNewFile .metrics setf ruby
 au BufRead,BufNewFile .simplecov setf ruby
 au BufRead,BufNewFile Guardfile setf ruby
-
 " Rspec highlighting out of rails projects
 autocmd BufRead *_spec.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject its shared_examples_for shared_context let
 highlight def link rubyRspec Function
-
-map <Leader>r :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>a :call RunLastSpec()<CR>
 
 " For syntastic
 let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['html'] }
@@ -131,22 +125,37 @@ let g:Powerline_symbols = 'fancy'
 set laststatus=2
 set guifont=Ubuntu\ Mono\ for\ Powerline\ 10
 
-
 " 256 colors
 set t_Co=256
 
 " history
 set history=700
 
+" Leader commands 
+map <Leader>r :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>a :call RunLastSpec()<CR>
+
 " set a map leader that and a save shortcut
 " Leader is already \
-"let mapleader = ','
-"let g:mapleader = ','
+let mapleader = ','
 nmap <leader>w :w<cr>
 
 " Ruby 1.8 to 1.9 hash conversion
 nmap <leader>h :s/\:\([a-zA-Z_]*\)\s*=>/\1\: /g<cr>
 vmap <Leader>h :s/\:\([a-zA-Z_]*\)\s*=>/\1\: /g<cr>
+
+" disable hightlight when <leader><cr> is pressed
+map <leader>no :noh
+
+" Toggle spell checking
+map <leader>ss :setlocal spell!<cr>
+
+" Spelling shortcuts
+map <leader>sn ]s
+map <leader>sp [s
+map <leader>sa zg
+map <leader>s? z=
 
 " set command bar height
 set cmdheight=1
@@ -159,29 +168,6 @@ set novisualbell
 set encoding=utf8
 set ffs=unix,dos,mac
 
-" Turn backups off
-" set nobackup
-" set nowb
-" set noswapfile
-
-" disable hightlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
-
-" Toggle spell checking
-map <leader>ss :setlocal spell!<cr>
-
-" Spelling shortcuts
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
-
-" xmpfilter
-map <F4> <Plug>(xmpfilter-mark)
-map <F5> <Plug>(xmpfilter-run)
-
-"colorscheme desert
-"color vividchalk
 color jellybeans
 
 let $GIT_SSL_NO_VERIFY = 'true'

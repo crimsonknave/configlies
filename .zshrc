@@ -76,5 +76,10 @@ rspec() {
     command rspec "$@"
   fi
 }
+
+setxkbmap -option caps:escape
+
+function gi() { curl http://www.gitignore.io/api/$@ ;}
+
 autoload zmv
 doge
