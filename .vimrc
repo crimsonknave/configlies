@@ -134,7 +134,7 @@ set history=700
 " Leader commands 
 map <Leader>r :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>a :call RunLastSpec()<CR>
+"map <Leader>a :call RunLastSpec()<CR>
 
 " set a map leader that and a save shortcut
 " Leader is already \
@@ -145,8 +145,10 @@ nmap <leader>w :w<cr>
 nmap <leader>h :s/\:\([a-zA-Z_]*\)\s*=>/\1\: /g<cr>
 vmap <Leader>h :s/\:\([a-zA-Z_]*\)\s*=>/\1\: /g<cr>
 
-" disable hightlight when <leader><cr> is pressed
-map <leader>no :noh
+map <leader><space> :noh<cr>
+map <leader>a :Ack 
+map <leader>e :e 
+
 
 " Toggle spell checking
 map <leader>ss :setlocal spell!<cr>
